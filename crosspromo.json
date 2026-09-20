@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "apps": [
     {
       "id": "com.joostmuijsenberg.wordconnect",
@@ -885,6 +885,65 @@
         "uk": "Повертайте труби, замкніть потік",
         "vi": "Xoay ống, nối dòng chảy",
         "zh": "转动管道，接通水流"
+      }
+    },
+    {
+      "id": "com.joostmuijsenberg.factflow",
+      "title": "FactFlow",
+      "icon": "https://jooostt.github.io/assets/apps/factflow/icon.png",
+      "tags": [
+        "facts",
+        "trivia"
+      ],
+      "weight": 60,
+      "active": false,
+      "pitch": {
+        "nl": "Veeg door weetjes, zonder internet",
+        "en": "Swipe through facts, no internet",
+        "de": "Wisch durch Fakten, ohne Internet",
+        "fr": "Faites défiler des faits, hors ligne",
+        "es": "Desliza datos curiosos, sin internet",
+        "pt": "Deslize curiosidades, sem internet",
+        "it": "Scorri curiosità, senza internet",
+        "pl": "Przesuwaj ciekawostki, bez sieci",
+        "tr": "Bilgileri kaydır, internetsiz",
+        "ro": "Derulează curiozități, fără internet",
+        "ru": "Листайте факты, без интернета",
+        "id": "Geser fakta seru, tanpa internet",
+        "cs": "Posouvej zajímavosti, bez netu",
+        "ar": "مرّر الحقائق، بدون إنترنت",
+        "el": "Σκρόλαρε γεγονότα, χωρίς ίντερνετ",
+        "he": "גללו עובדות, בלי אינטרנט",
+        "hi": "तथ्य स्वाइप करें, बिना इंटरनेट",
+        "hu": "Pörgesd a tényeket, internet nélkül",
+        "ja": "豆知識をスワイプ、オフラインでも",
+        "fil": "I-swipe ang mga fact, walang internet",
+        "ms": "Leret fakta menarik, tanpa internet",
+        "ur": "حقائق سوائپ کریں، بغیر انٹرنیٹ",
+        "sk": "Posúvaj zaujímavosti, bez netu",
+        "hr": "Listaj zanimljivosti, bez neta",
+        "bg": "Прелистай факти, без интернет",
+        "sr": "Листај занимљивости, без нета",
+        "fa": "حقایق را ورق بزنید، بدون اینترنت",
+        "bn": "তথ্য সোয়াইপ করুন, ইন্টারনেট ছাড়া",
+        "sw": "Telezesha maarifa, bila intaneti",
+        "ta": "தகவல்களை ஸ்வைப் செய்யுங்கள், இணையம் இன்றி",
+        "te": "సంగతులను స్వైప్ చేయండి, ఇంటర్నెట్ అక్కర్లేదు",
+        "mr": "तथ्ये स्वाइप करा, इंटरनेटशिवाय",
+        "ca": "Llisca curiositats, sense internet",
+        "sq": "Rrëshqit faktet, pa internet",
+        "lt": "Slink faktus, be interneto",
+        "sl": "Listaj zanimivosti, brez neta",
+        "lv": "Pārvelc faktus, bez interneta",
+        "da": "Swipe fakta, uden internet",
+        "fi": "Selaa faktoja ilman nettiä",
+        "ko": "인터넷 없이 상식을 넘기세요",
+        "nb": "Sveip fakta, uten internett",
+        "sv": "Svep genom fakta, utan internet",
+        "th": "ปัดอ่านเกร็ดความรู้ ออฟไลน์",
+        "uk": "Гортайте факти, без інтернету",
+        "vi": "Lướt sự thật thú vị, offline",
+        "zh": "滑动看冷知识，无需联网"
       }
     }
   ]
