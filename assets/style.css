@@ -409,3 +409,101 @@ header.hero::before {
   border: 1px solid var(--border);
   color: var(--muted);
 }
+
+/* ---------- language switch ---------- */
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 16px;
+  margin-bottom: 28px;
+}
+
+.topbar nav.crumbs { margin-bottom: 0; }
+
+.lang-switch {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.lang-switch a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.lang-switch a:hover { color: var(--accent); }
+
+.lang-switch strong { color: var(--text); font-weight: 600; }
+
+header.site .lang-switch { margin-bottom: 16px; }
+
+footer.site .lang-switch { margin-top: 8px; }
+
+/* ---------- Google Play strip on the homepage ---------- */
+
+.play-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.play-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px 6px 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+  transition: border-color 0.12s ease, color 0.12s ease, transform 0.12s ease;
+}
+
+.play-chip img {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+}
+
+.play-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ---------- FAQ ---------- */
+
+.faq {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.faq details {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 18px;
+  box-shadow: var(--shadow);
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style-position: outside;
+}
+
+.faq details[open] summary { margin-bottom: 6px; }
+
+.faq details p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.925rem;
+}

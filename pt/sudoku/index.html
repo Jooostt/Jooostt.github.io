@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku: jogo de lógica grátis e offline para Android</title>
+  <meta name="description" content="O sudoku clássico. Puzzles infinitos e um desafio novo todos os dias. Grátis para Android, funciona offline, sem conta." />
+  <link rel="canonical" href="https://jooostt.github.io/pt/sudoku/" />
+  <link rel="alternate" hreflang="en" href="https://jooostt.github.io/sudoku/" />
+  <link rel="alternate" hreflang="nl" href="https://jooostt.github.io/nl/sudoku/" />
+  <link rel="alternate" hreflang="de" href="https://jooostt.github.io/de/sudoku/" />
+  <link rel="alternate" hreflang="es" href="https://jooostt.github.io/es/sudoku/" />
+  <link rel="alternate" hreflang="fr" href="https://jooostt.github.io/fr/sudoku/" />
+  <link rel="alternate" hreflang="pt" href="https://jooostt.github.io/pt/sudoku/" />
+  <link rel="alternate" hreflang="x-default" href="https://jooostt.github.io/sudoku/" />
+  <meta name="author" content="Joost Muijsenberg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Joost Muijsenberg" />
+  <meta property="og:title" content="Sudoku: jogo de lógica grátis e offline para Android" />
+  <meta property="og:description" content="O sudoku clássico. Puzzles infinitos e um desafio novo todos os dias. Grátis para Android, funciona offline, sem conta." />
+  <meta property="og:url" content="https://jooostt.github.io/pt/sudoku/" />
+  <meta property="og:image" content="https://jooostt.github.io/assets/apps/sudoku/og.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sudoku: jogo de lógica grátis e offline para Android" />
+  <meta name="twitter:description" content="O sudoku clássico. Puzzles infinitos e um desafio novo todos os dias. Grátis para Android, funciona offline, sem conta." />
+  <meta name="twitter:image" content="https://jooostt.github.io/assets/apps/sudoku/og.jpg" />
+  <meta name="theme-color" content="#3557e8" />
+  <link rel="icon" href="../../favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sudoku - Jogo de lógica",
+  "alternateName": "Sudoku",
+  "description": "O sudoku clássico. Puzzles infinitos e um desafio novo todos os dias.",
+  "url": "https://jooostt.github.io/pt/sudoku/",
+  "image": "https://jooostt.github.io/assets/apps/sudoku/og.jpg",
+  "screenshot": [
+    "https://jooostt.github.io/assets/apps/sudoku/pt/shot-1.webp",
+    "https://jooostt.github.io/assets/apps/sudoku/pt/shot-2.webp",
+    "https://jooostt.github.io/assets/apps/sudoku/pt/shot-3.webp",
+    "https://jooostt.github.io/assets/apps/sudoku/pt/shot-4.webp"
+  ],
+  "inLanguage": "pt",
+  "operatingSystem": "Android",
+  "applicationCategory": "GameApplication",
+  "author": {
+    "@type": "Person",
+    "name": "Joost Muijsenberg",
+    "url": "https://jooostt.github.io/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "installUrl": "https://play.google.com/store/apps/details?id=com.joostmuijsenberg.sudoku"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Jogos",
+      "item": "https://jooostt.github.io/pt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sudoku",
+      "item": "https://jooostt.github.io/pt/sudoku/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Sudoku é grátis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Sudoku é grátis para baixar e jogar. O app mostra anúncios, que você pode remover com uma compra opcional no app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sudoku funciona offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Sudoku funciona sem conexão com a internet, então dá para jogar no avião, no ônibus ou em qualquer lugar sem Wi-Fi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso de uma conta para jogar Sudoku?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Não é preciso se cadastrar nem fazer login: abra o app e jogue. Suas partidas e configurações ficam no seu próprio aparelho."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como se joga Sudoku?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada sudoku é gerado na hora e tem garantidamente uma única solução. Toque numa célula, escolha um número e use as notas a lápis para os candidatos. Os erros aparecem logo; com três erros a partida termina."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tem um desafio novo todo dia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Todos os dias um sudoku único, igual para toda a gente. Ganhe uma medalha de 1 a 5 estrelas e construa uma sequência: 3, 7, 30 ou até 100 dias seguidos!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Onde posso baixar Sudoku?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sudoku está disponível para celulares e tablets Android no Google Play. Use o botão no topo desta página."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <nav class="crumbs"><a href="../../pt/">Jogos</a> &nbsp;/&nbsp; Sudoku</nav>
+      <nav class="lang-switch" aria-label="Idioma"><a href="../../sudoku/" hreflang="en" lang="en">English</a> · <a href="../../nl/sudoku/" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../de/sudoku/" hreflang="de" lang="de">Deutsch</a> · <a href="../../es/sudoku/" hreflang="es" lang="es">Español</a> · <a href="../../fr/sudoku/" hreflang="fr" lang="fr">Français</a> · <strong>Português</strong></nav>
+    </div>
+
+    <header class="hero">
+      <img class="hero-icon" src="../../assets/apps/sudoku/icon.png" width="96" height="96" alt="Ícone do app Sudoku" />
+      <div class="hero-text">
+        <h1>Sudoku</h1>
+        <p class="lead">O sudoku clássico. Puzzles infinitos e um desafio novo todos os dias.</p>
+      </div>
+    </header>
+
+    <div class="cta">
+      <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.sudoku&amp;hl=pt&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3Dsudoku-pt" rel="noopener" target="_blank">
+        <img src="../../assets/google-play-badge.png" width="323" height="125" alt="Baixe Sudoku - Jogo de lógica no Google Play" />
+      </a>
+    </div>
+
+    <main>
+      <div class="shots">
+        <img src="../../assets/apps/sudoku/pt/shot-1.webp" width="340" height="604" alt="Sudoku – menu principal" loading="lazy" decoding="async" />
+        <img src="../../assets/apps/sudoku/pt/shot-2.webp" width="340" height="604" alt="Sudoku – partida em andamento" loading="lazy" decoding="async" />
+        <img src="../../assets/apps/sudoku/pt/shot-3.webp" width="340" height="604" alt="Sudoku – desafio diário" loading="lazy" decoding="async" />
+        <img src="../../assets/apps/sudoku/pt/shot-4.webp" width="340" height="604" alt="Sudoku – loja de temas" loading="lazy" decoding="async" />
+      </div>
+
+      <h2>Sobre Sudoku</h2>
+      <p>Jogue Sudoku, o clássico puzzle de números — em qualquer lugar, totalmente offline. Preencha a grelha para que cada número de 1 a 9 apareça exatamente uma vez em cada linha, coluna e bloco 3×3!</p>
+
+      <div class="features">
+      <section class="feature">
+        <h3><span class="feature-emoji" aria-hidden="true">🧩</span>Como jogar</h3>
+        <p>Cada sudoku é gerado na hora e tem garantidamente uma única solução. Toque numa célula, escolha um número e use as notas a lápis para os candidatos. Os erros aparecem logo; com três erros a partida termina.</p>
+      </section>
+      <section class="feature">
+        <h3><span class="feature-emoji" aria-hidden="true">🎯</span>Quatro níveis de dificuldade</h3>
+        <ul>
+          <li>Fácil: muitos números já preenchidos, ideal para uma pausa</li>
+          <li>Normal: o clássico do jornal</li>
+          <li>Difícil: para quem já domina o jogo</li>
+          <li>Especialista: ajuda mínima — para o verdadeiro puzzler</li>
+        </ul>
+      </section>
+      <section class="feature">
+        <h3><span class="feature-emoji" aria-hidden="true">🗺️</span>Modo aventura</h3>
+        <p>Percorra centenas de níveis numerados cada vez mais difíceis. Viaje por mundos coloridos, ganhe uma medalha em cada nível e receba recompensas nos marcos do caminho.</p>
+      </section>
+      <section class="feature">
+        <h3><span class="feature-emoji" aria-hidden="true">📅</span>Sudoku diário</h3>
+        <p>Todos os dias um sudoku único, igual para toda a gente. Ganhe uma medalha de 1 a 5 estrelas e construa uma sequência: 3, 7, 30 ou até 100 dias seguidos!</p>
+      </section>
+      <section class="feature">
+        <h3><span class="feature-emoji" aria-hidden="true">🪙</span>Moedas e temas</h3>
+        <p>Ganhe moedas com cada sudoku concluído e gaste-as em dicas ou novos visuais: Floresta, Espaço, Néon, Madeira, Mármore, Natal e Halloween. Apenas cosmético — sem pay-to-win.</p>
+      </section>
+      <section class="feature">
+        <h3><span class="feature-emoji" aria-hidden="true">🏅</span>E ainda</h3>
+        <ul>
+          <li>Dicas com moedas</li>
+          <li>Notas inteligentes que se limpam sozinhas</li>
+          <li>23 conquistas, do primeiro sudoku até cem dias seguidos</li>
+          <li>Estatísticas detalhadas: melhor tempo, sudokus sem erros e mais</li>
+          <li>Modo zen: esconda o cronómetro e resolva ao seu ritmo</li>
+          <li>Som e vibração (desativáveis nas definições)</li>
+          <li>Disponível em português, inglês, neerlandês, espanhol, alemão e francês</li>
+        </ul>
+      </section>
+      </div>
+
+      <p class="note">Grátis para jogar. O app mostra anúncios, que você pode remover com uma compra opcional; não é preciso criar conta.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <div class="faq">
+        <details>
+          <summary>Sudoku é grátis?</summary>
+          <p>Sim. Sudoku é grátis para baixar e jogar. O app mostra anúncios, que você pode remover com uma compra opcional no app.</p>
+        </details>
+        <details>
+          <summary>Sudoku funciona offline?</summary>
+          <p>Sim. Sudoku funciona sem conexão com a internet, então dá para jogar no avião, no ônibus ou em qualquer lugar sem Wi-Fi.</p>
+        </details>
+        <details>
+          <summary>Preciso de uma conta para jogar Sudoku?</summary>
+          <p>Não. Não é preciso se cadastrar nem fazer login: abra o app e jogue. Suas partidas e configurações ficam no seu próprio aparelho.</p>
+        </details>
+        <details>
+          <summary>Como se joga Sudoku?</summary>
+          <p>Cada sudoku é gerado na hora e tem garantidamente uma única solução. Toque numa célula, escolha um número e use as notas a lápis para os candidatos. Os erros aparecem logo; com três erros a partida termina.</p>
+        </details>
+        <details>
+          <summary>Tem um desafio novo todo dia?</summary>
+          <p>Todos os dias um sudoku único, igual para toda a gente. Ganhe uma medalha de 1 a 5 estrelas e construa uma sequência: 3, 7, 30 ou até 100 dias seguidos!</p>
+        </details>
+        <details>
+          <summary>Onde posso baixar Sudoku?</summary>
+          <p>Sudoku está disponível para celulares e tablets Android no Google Play. Use o botão no topo desta página.</p>
+        </details>
+      </div>
+
+      <h2>Outros jogos de que você pode gostar</h2>
+      <div class="card-grid">
+        <a class="card" href="../../pt/nonogram/">
+          <img class="card-icon" src="../../assets/apps/nonogram/icon.png" width="64" height="64" alt="" loading="lazy" />
+          <h3>Nonogram</h3>
+          <p>O nonogram clássico. Puzzles infinitos e um desafio novo todos os dias.</p>
+          <span class="tag">Google Play</span>
+        </a>
+        <a class="card" href="../../pt/MineSweeper/">
+          <img class="card-icon" src="../../assets/apps/MineSweeper/icon.png" width="64" height="64" alt="" loading="lazy" />
+          <h3>Campo Minado</h3>
+          <p>O campo minado clássico. Campos infinitos e um desafio novo todos os dias.</p>
+          <span class="tag">Google Play</span>
+        </a>
+        <a class="card" href="../../pt/blockpuzzle/">
+          <img class="card-icon" src="../../assets/apps/blockpuzzle/icon.png" width="64" height="64" alt="" loading="lazy" />
+          <h3>Puzzle de blocos</h3>
+          <p>Preenche o tabuleiro por completo. Sempre resolúvel, um desafio por dia.</p>
+          <span class="tag">Google Play</span>
+        </a>
+      </div>
+
+      <h2>Informações legais</h2>
+      <p>Abaixo estão os documentos legais que se aplicam a Sudoku.</p>
+
+      <div class="doc-links">
+        <a href="../../sudoku/privacy.html">Política de privacidade (em inglês)</a>
+        <a href="../../sudoku/terms.html">Termos de uso (em inglês)</a>
+      </div>
+
+      <h2>Contato</h2>
+      <p>Dúvidas, sugestões ou um pedido de privacidade? Escreva para <a href="mailto:joostmuijsenberg.dev@gmail.com">joostmuijsenberg.dev@gmail.com</a>.</p>
+    </main>
+
+    <footer class="site">
+      <p>&copy; <span id="year">2026</span> Joost Muijsenberg. <a href="../../pt/">Todos os jogos</a></p>
+      <nav class="lang-switch" aria-label="Idioma"><a href="../../sudoku/" hreflang="en" lang="en">English</a> · <a href="../../nl/sudoku/" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../de/sudoku/" hreflang="de" lang="de">Deutsch</a> · <a href="../../es/sudoku/" hreflang="es" lang="es">Español</a> · <a href="../../fr/sudoku/" hreflang="fr" lang="fr">Français</a> · <strong>Português</strong></nav>
+    </footer>
+  </div>
+  <script src="../../assets/site.js" defer></script>
+</body>
+</html>
