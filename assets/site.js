@@ -80,10 +80,14 @@
     var cards = grid.querySelectorAll('.card[data-cat]');
     var buttons = filters.querySelectorAll('.filter');
     // Alleen categorieën tonen waar ook spellen in zitten.
+    var shown = 0;
     buttons.forEach(function (b) {
-      if (b.dataset.cat !== 'all' && !grid.querySelector('.card[data-cat="' + b.dataset.cat + '"]')) b.hidden = true;
+      if (b.dataset.cat === 'all') return;
+      if (grid.querySelector('.card[data-cat="' + b.dataset.cat + '"]')) shown++;
+      else b.hidden = true;
     });
-    filters.hidden = false;
+    // Met maar één soort spel heeft filteren geen zin.
+    if (shown > 1) filters.hidden = false;
     filters.addEventListener('click', function (ev) {
       var btn = ev.target.closest('.filter');
       if (!btn) return;

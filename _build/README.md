@@ -24,3 +24,13 @@ van de conceptapps (Forbidden Words, FactFlow, Aquarium, Butterfly Garden).
 **Ontwerp-instellingen** in `apps.py`: `color` (accentkleur van de app-pagina), `cat` (filter op de
 homepage), `FEATURED` (uitgelicht spel met video) en `HERO_SHOTS` (de drie telefoons in de kop).
 De video-ID's staan in `videos.py` (uit de Play-listings); de video laadt pas na een klik, via youtube-nocookie.
+
+**Talen per spel**: een spel krijgt een pagina in elke taal die in de app aan staat (dezelfde
+taalschakelaar die het portaal leest) en waarvoor listingteksten en vier schermafbeeldingen bestaan.
+Vaste teksten voor de zes extra talen (it, tr, pl, ro, ru, ca) staan in `i18n_more.py`.
+
+**Na het pushen**:
+- `py -3 _build/update_videos.py` werkt de video's en uploaddatums bij (privévideo's worden overgeslagen).
+- `py -3 _build/indexnow.py` meldt de gewijzigde pagina's van de laatste commit bij Bing/IndexNow
+  (`--all` voor de hele sitemap). De sleutel staat als bestand in de root.
+- `llms.txt` (overzicht voor AI-zoekmachines) wordt door de build zelf geschreven.

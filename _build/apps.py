@@ -13,12 +13,12 @@ APPS = [
     },
     {
         'slug': '30-seconds', 'color': '#1fb5a8', 'cat': 'party', 'dir': '30Seconds', 'id': 'com.joostmuijsenberg.thirtyseconds', 'live': True,
-        'genre': {'en': 'Party Word Game', 'nl': 'partyspel', 'de': 'Partyspiel', 'es': 'juego de palabras para fiestas', 'fr': 'jeu de mots pour soirées', 'pt': 'jogo de palavras para festas'},
+        'genre': {'en': 'Party Word Game', 'nl': 'partyspel', 'de': 'Partyspiel', 'es': 'juego de palabras para fiestas', 'fr': 'jeu de mots pour soirées', 'pt': 'jogo de palavras para festas', 'it': 'gioco di parole per feste', 'tr': 'parti kelime oyunu', 'pl': 'imprezowa gra słowna', 'ro': 'joc de cuvinte pentru petreceri'},
         'related': ['wordconnect', 'hartenjagen', 'wordsearch'],
     },
     {
         'slug': 'blockpuzzle', 'color': '#3fae6a', 'cat': 'puzzle', 'dir': 'BlockPuzzle/BlockPuzzle', 'id': 'com.joostmuijsenberg.blockpuzzle', 'live': True,
-        'genre': {'en': 'Block Puzzle Game', 'nl': 'puzzelspel', 'de': 'Denkspiel', 'es': 'juego de lógica', 'fr': 'jeu de blocs', 'pt': 'jogo de lógica'},
+        'genre': {'en': 'Block Puzzle Game', 'nl': 'puzzelspel', 'de': 'Denkspiel', 'es': 'juego de lógica', 'fr': 'jeu de blocs', 'pt': 'jogo de lógica', 'it': 'gioco di logica', 'ru': 'головоломка', 'tr': 'zekâ oyunu'},
         'related': ['sudoku', 'nonogram', 'MineSweeper'],
     },
     {
@@ -34,7 +34,7 @@ APPS = [
     },
     {
         'slug': 'crossword', 'color': '#f26b5b', 'cat': 'word', 'dir': 'Crossword/Crossword', 'id': 'com.joostmuijsenberg.crossword', 'live': True,
-        'genre': {'en': 'Crossword Puzzle Game', 'nl': 'kruiswoordpuzzel', 'de': 'Worträtsel', 'es': 'juego de palabras', 'fr': 'jeu de lettres', 'pt': 'jogo de palavras'},
+        'genre': {'en': 'Crossword Puzzle Game', 'nl': 'kruiswoordpuzzel', 'de': 'Worträtsel', 'es': 'juego de palabras', 'fr': 'jeu de lettres', 'pt': 'jogo de palavras', 'ca': 'joc de paraules', 'it': 'gioco di parole', 'tr': 'kelime oyunu'},
         'related': ['wordsearch', 'wordconnect', 'sudoku'],
     },
     {
@@ -45,17 +45,17 @@ APPS = [
     {
         'slug': 'hartenjagen', 'color': '#e8395a', 'cat': 'card', 'dir': 'Hartenjagen/Hartenjagen', 'id': 'com.joostmuijsenberg.hearts', 'live': True,
         'name_en': 'Hearts',
-        'genre': {'en': 'Hearts Card Game', 'nl': 'kaartspel', 'de': 'Kartenspiel', 'es': 'juego de cartas', 'fr': 'jeu de cartes', 'pt': 'jogo de cartas'},
+        'genre': {'en': 'Hearts Card Game', 'nl': 'kaartspel', 'de': 'Kartenspiel', 'es': 'juego de cartas', 'fr': 'jeu de cartes', 'pt': 'jogo de cartas', 'it': 'gioco di carte', 'pl': 'gra karciana', 'ro': 'joc de cărți', 'ru': 'карточная игра', 'tr': 'kart oyunu'},
         'related': ['sudoku', 'MineSweeper', '30-seconds'],
     },
     {
         'slug': 'MineSweeper', 'color': '#6fb33a', 'cat': 'puzzle', 'dir': 'MineSweeper/MineSweeper', 'id': 'com.joostmuijsenberg.minesweeper', 'live': True,
-        'genre': {'en': 'Minesweeper Game', 'nl': 'puzzelspel', 'de': 'Logikspiel', 'es': 'juego de lógica', 'fr': 'jeu de logique', 'pt': 'jogo de lógica'},
+        'genre': {'en': 'Minesweeper Game', 'nl': 'puzzelspel', 'de': 'Logikspiel', 'es': 'juego de lógica', 'fr': 'jeu de logique', 'pt': 'jogo de lógica', 'it': 'gioco di logica', 'tr': 'zekâ oyunu'},
         'related': ['sudoku', 'nonogram', 'blockpuzzle'],
     },
     {
         'slug': 'nonogram', 'color': '#f0a830', 'cat': 'puzzle', 'dir': 'Nonogram/Nonogram', 'id': 'com.joostmuijsenberg.nonogram', 'live': True,
-        'genre': {'en': 'Picture Logic Puzzle', 'nl': 'logische puzzel', 'de': 'Logikrätsel', 'es': 'juego de lógica', 'fr': 'jeu de logique', 'pt': 'jogo de lógica'},
+        'genre': {'en': 'Picture Logic Puzzle', 'nl': 'logische puzzel', 'de': 'Logikrätsel', 'es': 'juego de lógica', 'fr': 'jeu de logique', 'pt': 'jogo de lógica', 'it': 'gioco di logica', 'ro': 'joc de logică', 'tr': 'mantık bulmacası'},
         'related': ['sudoku', 'MineSweeper', 'crossword'],
     },
     {
@@ -70,17 +70,17 @@ APPS = [
     },
     {
         'slug': 'sudoku', 'color': '#ef6c57', 'cat': 'puzzle', 'dir': 'Sudoku/Sudoku', 'id': 'com.joostmuijsenberg.sudoku', 'live': True,
-        'genre': {'en': 'Sudoku Puzzle Game', 'nl': 'puzzelspel', 'de': 'Rätselspiel', 'es': 'juego de lógica', 'fr': 'jeu de logique', 'pt': 'jogo de lógica'},
+        'genre': {'en': 'Sudoku Puzzle Game', 'nl': 'puzzelspel', 'de': 'Rätselspiel', 'es': 'juego de lógica', 'fr': 'jeu de logique', 'pt': 'jogo de lógica', 'it': 'gioco di logica', 'pl': 'gra logiczna', 'tr': 'bulmaca oyunu'},
         'related': ['nonogram', 'MineSweeper', 'blockpuzzle'],
     },
     {
         'slug': 'wordconnect', 'color': '#e8546d', 'cat': 'word', 'dir': 'WordConnect/WordConnect', 'id': 'com.joostmuijsenberg.wordconnect', 'live': True,
-        'genre': {'en': 'Word Puzzle Game', 'nl': 'woordpuzzel', 'de': 'Worträtsel', 'es': 'juego de palabras', 'fr': 'jeu de mots', 'pt': 'jogo de palavras'},
+        'genre': {'en': 'Word Puzzle Game', 'nl': 'woordpuzzel', 'de': 'Worträtsel', 'es': 'juego de palabras', 'fr': 'jeu de mots', 'pt': 'jogo de palavras', 'ca': 'joc de paraules', 'it': 'gioco di parole', 'tr': 'kelime oyunu'},
         'related': ['wordsearch', 'crossword', '30-seconds'],
     },
     {
         'slug': 'wordsearch', 'color': '#d9734e', 'cat': 'word', 'dir': 'WordSearch/WordSearch', 'id': 'com.joostmuijsenberg.wordsearch', 'live': True,
-        'genre': {'en': 'Word Search Puzzle', 'nl': 'woordpuzzel', 'de': 'Wörterrätsel', 'es': 'juego de palabras', 'fr': 'jeu de mots', 'pt': 'jogo de letras'},
+        'genre': {'en': 'Word Search Puzzle', 'nl': 'woordpuzzel', 'de': 'Wörterrätsel', 'es': 'juego de palabras', 'fr': 'jeu de mots', 'pt': 'jogo de letras', 'ca': 'joc de paraules', 'it': 'gioco di parole', 'tr': 'kelime bulmacası'},
         'related': ['wordconnect', 'crossword', 'nonogram'],
     },
 ]

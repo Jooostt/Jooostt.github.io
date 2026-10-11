@@ -347,6 +347,11 @@ DE_HEADINGS = {
 def heading(lang, title):
     if lang == 'de':
         return DE_HEADINGS[title]
+    if lang == 'tr':
+        # Turkse i: I wordt ı en İ wordt i (en andersom bij de hoofdletter).
+        t = title.replace('I', 'ı').replace('İ', 'i').lower()
+        first = {'i': 'İ', 'ı': 'I'}.get(t[:1], t[:1].upper())
+        return first + t[1:]
     t = title.lower()
     return t[:1].upper() + t[1:]
 
@@ -462,3 +467,26 @@ DESIGN = {
         'next': 'Próxima',
     },
 }
+
+
+# ---------- extra talen ----------
+import i18n_more as _more  # noqa: E402
+
+MAIN_LANGS = list(LANGS)
+LANGS += _more.MORE_LANGS
+AUTONYM.update(_more.AUTONYM)
+OG_LOCALE.update(_more.OG_LOCALE)
+UI.update(_more.UI)
+FAQ.update(_more.FAQ)
+DESIGN.update(_more.DESIGN)
+for _key, _texts in _more.SHOT.items():
+    SHOT[_key].update(_texts)
+
+MORE_IN_EN = {
+    'nl': 'Meer spellen vind je in het Engels: {link}.',
+    'de': 'Weitere Spiele gibt es auf Englisch: {link}.',
+    'es': 'Hay más juegos disponibles en inglés: {link}.',
+    'fr': 'D’autres jeux sont disponibles en anglais : {link}.',
+    'pt': 'Há mais jogos disponíveis em inglês: {link}.',
+}
+MORE_IN_EN.update(_more.MORE_IN_EN)

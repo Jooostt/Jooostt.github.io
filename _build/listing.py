@@ -68,3 +68,50 @@ def parse_description(text):
                 target.append(('p', line))
     trailer = rest[end:]
     return intro, sections, trailer
+
+
+_SKIP = {'bin', 'obj', 'node_modules', 'PlayStoreAssets', '.git', '.vs'}
+
+
+def _switch_files(project_dir, max_depth=4):
+    out = []
+    for dirpath, dirs, files in os.walk(project_dir):
+        rel = os.path.relpath(dirpath, project_dir)
+        depth = 0 if rel == '.' else rel.count(os.sep) + 1
+        dirs[:] = [d for d in dirs if d not in _SKIP and not d.startswith('.')] if depth < max_depth else []
+        out += [os.path.join(dirpath, f) for f in files if f in ('LocalizationManager.cs', 'LanguageSettings.cs')]
+    return out
+
+
+def app_language_switches(app_dir):
+    """Talen die in de app aan staan, gelezen zoals het portaal dat doet (AppLanguageSwitchReader):
+    eerst de LanguageEnabled-tabel, dan LanguageSettings, anders de vertaalblokken zelf."""
+    project_dir = os.path.join(ROOT, app_dir)
+    files = _switch_files(project_dir)
+    code = r'"([a-z]{2,3}(?:-[A-Za-z]{2,4})?)"'
+    for f in files:
+        if f.endswith('LocalizationManager.cs'):
+            text = _read(f)
+            start = text.find('LanguageEnabled')
+            if start >= 0:
+                block = text[start:text.find('};', start)]
+                table = {c: v == 'true' for c, v in re.findall(r'\[' + code + r'\]\s*=\s*(true|false)', block)}
+                if table:
+                    return table
+    for f in files:
+        if f.endswith('LanguageSettings.cs'):
+            table = {c: v == 'true' for c, v in re.findall(r'new\s+LanguageInfo\(\s*' + code + r'[^)]*?Enabled:\s*(true|false)', _read(f))}
+            if table:
+                return table
+    for f in files:
+        if f.endswith('LocalizationManager.cs'):
+            table = {c: True for c in re.findall(r'\[' + code + r'\]\s*=\s*new\s+Dictionary<string,\s*string>', _read(f))}
+            if table:
+                return table
+    return None
+
+
+def has_listing(app_dir, lang):
+    base = os.path.join(ROOT, app_dir, 'PlayStoreAssets')
+    return (bool(glob.glob(os.path.join(base, 'metadata', lang, '*full-description.txt')))
+            and len(glob.glob(os.path.join(base, 'screenshots', lang, f'{lang}_0[1-4]-*.png'))) == 4)
