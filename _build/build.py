@@ -332,7 +332,7 @@ def app_page(app, lang, all_data):
     </main>
 
     <footer class="site">
-      <p>&copy; <span id="year">{TODAY[:4]}</span> Joost Muijsenberg. <a href="{pre}{page_path(lang)}">{u["all_games"]}</a></p>
+      <p>&copy; <span id="year">{TODAY[:4]}</span> Joost Muijsenberg. {u["hobby"]} <a href="{pre}{page_path(lang)}">{u["all_games"]}</a></p>
       {lang_switch(lang, slug)}
     </footer>
   </div>
@@ -414,7 +414,7 @@ def home_page(lang, all_data):
     </main>
 
     <footer class="site">
-      <p>&copy; <span id="year">{TODAY[:4]}</span> Joost Muijsenberg.</p>
+      <p>&copy; <span id="year">{TODAY[:4]}</span> Joost Muijsenberg. {u["hobby"]}</p>
     </footer>
   </div>
   <script src="{pre}assets/site.js" defer></script>
