@@ -136,7 +136,7 @@
 }
   </script>
 </head>
-<body>
+<body class="app-page has-sticky" style="--app: #f0a830">
   <div class="container">
     <div class="topbar">
       <nav class="crumbs"><a href="../../fr/">Jeux</a> &nbsp;/&nbsp; Nonogram</nav>
@@ -158,12 +158,29 @@
     </div>
 
     <main>
-      <div class="shots">
-        <img src="../../assets/apps/nonogram/fr/shot-1.webp" width="340" height="604" alt="Nonogram – menu principal" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/nonogram/fr/shot-2.webp" width="340" height="604" alt="Nonogram – partie en cours" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/nonogram/fr/shot-3.webp" width="340" height="604" alt="Nonogram – défi du jour" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/nonogram/fr/shot-4.webp" width="340" height="604" alt="Nonogram – boutique de thèmes" loading="lazy" decoding="async" />
+      <div class="shots" data-close="Fermer" data-prev="Précédente" data-next="Suivante">
+        <a class="shot" href="../../assets/apps/nonogram/fr/shot-1-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/nonogram/fr/shot-1.webp" width="340" height="604" alt="Nonogram – menu principal" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/nonogram/fr/shot-2-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/nonogram/fr/shot-2.webp" width="340" height="604" alt="Nonogram – partie en cours" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/nonogram/fr/shot-3-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/nonogram/fr/shot-3.webp" width="340" height="604" alt="Nonogram – défi du jour" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/nonogram/fr/shot-4-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/nonogram/fr/shot-4.webp" width="340" height="604" alt="Nonogram – boutique de thèmes" loading="lazy" decoding="async" />
+        </a>
       </div>
+
+      <h2>Voir le jeu en action</h2>
+      <div class="video" data-yt="FkDGV7miZZ4" data-hl="fr">
+        <a class="video-play" href="https://www.youtube.com/watch?v=FkDGV7miZZ4" rel="noopener" target="_blank" aria-label="Lire la vidéo de Nonogram">
+          <img src="../../assets/apps/nonogram/fr/feature.webp" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">La vidéo est lue via YouTube.</p>
 
       <h2>À propos de Nonogram</h2>
       <p>Jouez au Nonogram, le célèbre casse-tête japonais en images — partout, à tout moment, entièrement hors ligne. Les nombres à côté de chaque ligne et au-dessus de chaque colonne indiquent les séries de cases à remplir : à vous de trouver par la logique quelles cases se remplissent et lesquelles restent vides !</p>
@@ -276,6 +293,11 @@
       <p>&copy; <span id="year">2026</span> Joost Muijsenberg. Un projet perso, réalisé par passion sur mon temps libre. <a href="../../fr/">Tous les jeux</a></p>
       <nav class="lang-switch" aria-label="Langue"><a href="../../nonogram/" hreflang="en" lang="en">English</a> · <a href="../../nl/nonogram/" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../de/nonogram/" hreflang="de" lang="de">Deutsch</a> · <a href="../../es/nonogram/" hreflang="es" lang="es">Español</a> · <strong>Français</strong> · <a href="../../pt/nonogram/" hreflang="pt" lang="pt">Português</a></nav>
     </footer>
+  </div>
+  <div class="sticky-cta">
+    <img src="../../assets/apps/nonogram/icon.png" width="40" height="40" alt="" />
+    <div class="sticky-text"><strong>Nonogram</strong><span>Gratuit sur Google Play</span></div>
+    <a class="sticky-btn" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.nonogram&amp;hl=fr&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3Dnonogram-fr-sticky" rel="noopener" target="_blank">Installer</a>
   </div>
   <script src="../../assets/site.js" defer></script>
 </body>

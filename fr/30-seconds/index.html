@@ -128,7 +128,7 @@
 }
   </script>
 </head>
-<body>
+<body class="app-page has-sticky" style="--app: #1fb5a8">
   <div class="container">
     <div class="topbar">
       <nav class="crumbs"><a href="../../fr/">Jeux</a> &nbsp;/&nbsp; 30 Seconds</nav>
@@ -150,12 +150,29 @@
     </div>
 
     <main>
-      <div class="shots">
-        <img src="../../assets/apps/30-seconds/fr/shot-1.webp" width="340" height="604" alt="30 Seconds – création des équipes" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/30-seconds/fr/shot-2.webp" width="340" height="604" alt="30 Seconds – partie en cours" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/30-seconds/fr/shot-3.webp" width="340" height="604" alt="30 Seconds – score de la manche" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/30-seconds/fr/shot-4.webp" width="340" height="604" alt="30 Seconds – l’équipe gagnante" loading="lazy" decoding="async" />
+      <div class="shots" data-close="Fermer" data-prev="Précédente" data-next="Suivante">
+        <a class="shot" href="../../assets/apps/30-seconds/fr/shot-1-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/30-seconds/fr/shot-1.webp" width="340" height="604" alt="30 Seconds – création des équipes" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/30-seconds/fr/shot-2-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/30-seconds/fr/shot-2.webp" width="340" height="604" alt="30 Seconds – partie en cours" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/30-seconds/fr/shot-3-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/30-seconds/fr/shot-3.webp" width="340" height="604" alt="30 Seconds – score de la manche" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/30-seconds/fr/shot-4-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/30-seconds/fr/shot-4.webp" width="340" height="604" alt="30 Seconds – l’équipe gagnante" loading="lazy" decoding="async" />
+        </a>
       </div>
+
+      <h2>Voir le jeu en action</h2>
+      <div class="video" data-yt="EF-pX8xyXlk" data-hl="fr">
+        <a class="video-play" href="https://www.youtube.com/watch?v=EF-pX8xyXlk" rel="noopener" target="_blank" aria-label="Lire la vidéo de 30 Seconds">
+          <img src="../../assets/apps/30-seconds/fr/feature.webp" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">La vidéo est lue via YouTube.</p>
 
       <h2>À propos de 30 Seconds</h2>
       <p>Jouez à 30 Seconds, le jeu de devinettes de mots ultra-rapide et hilarant qui transforme toute réunion en compétition animée. Rassemblez vos amis, votre famille ou vos collègues, formez les équipes et préparez-vous à rire, crier et battre le chrono.</p>
@@ -268,6 +285,11 @@
       <p>&copy; <span id="year">2026</span> Joost Muijsenberg. Un projet perso, réalisé par passion sur mon temps libre. <a href="../../fr/">Tous les jeux</a></p>
       <nav class="lang-switch" aria-label="Langue"><a href="../../30-seconds/" hreflang="en" lang="en">English</a> · <a href="../../nl/30-seconds/" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../de/30-seconds/" hreflang="de" lang="de">Deutsch</a> · <a href="../../es/30-seconds/" hreflang="es" lang="es">Español</a> · <strong>Français</strong> · <a href="../../pt/30-seconds/" hreflang="pt" lang="pt">Português</a></nav>
     </footer>
+  </div>
+  <div class="sticky-cta">
+    <img src="../../assets/apps/30-seconds/icon.png" width="40" height="40" alt="" />
+    <div class="sticky-text"><strong>30 Seconds</strong><span>Gratuit sur Google Play</span></div>
+    <a class="sticky-btn" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.thirtyseconds&amp;hl=fr&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3D30-seconds-fr-sticky" rel="noopener" target="_blank">Installer</a>
   </div>
   <script src="../../assets/site.js" defer></script>
 </body>

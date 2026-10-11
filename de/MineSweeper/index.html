@@ -136,7 +136,7 @@
 }
   </script>
 </head>
-<body>
+<body class="app-page has-sticky" style="--app: #6fb33a">
   <div class="container">
     <div class="topbar">
       <nav class="crumbs"><a href="../../de/">Spiele</a> &nbsp;/&nbsp; Minesweeper</nav>
@@ -158,12 +158,29 @@
     </div>
 
     <main>
-      <div class="shots">
-        <img src="../../assets/apps/MineSweeper/de/shot-1.webp" width="340" height="604" alt="Minesweeper – Hauptmenü" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/MineSweeper/de/shot-2.webp" width="340" height="604" alt="Minesweeper – im Spiel" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/MineSweeper/de/shot-3.webp" width="340" height="604" alt="Minesweeper – Tagesrätsel" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/MineSweeper/de/shot-4.webp" width="340" height="604" alt="Minesweeper – Shop mit Designs" loading="lazy" decoding="async" />
+      <div class="shots" data-close="Schließen" data-prev="Zurück" data-next="Weiter">
+        <a class="shot" href="../../assets/apps/MineSweeper/de/shot-1-lg.webp" aria-label="Screenshot vergrößern">
+          <img src="../../assets/apps/MineSweeper/de/shot-1.webp" width="340" height="604" alt="Minesweeper – Hauptmenü" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/MineSweeper/de/shot-2-lg.webp" aria-label="Screenshot vergrößern">
+          <img src="../../assets/apps/MineSweeper/de/shot-2.webp" width="340" height="604" alt="Minesweeper – im Spiel" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/MineSweeper/de/shot-3-lg.webp" aria-label="Screenshot vergrößern">
+          <img src="../../assets/apps/MineSweeper/de/shot-3.webp" width="340" height="604" alt="Minesweeper – Tagesrätsel" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/MineSweeper/de/shot-4-lg.webp" aria-label="Screenshot vergrößern">
+          <img src="../../assets/apps/MineSweeper/de/shot-4.webp" width="340" height="604" alt="Minesweeper – Shop mit Designs" loading="lazy" decoding="async" />
+        </a>
       </div>
+
+      <h2>So sieht es aus</h2>
+      <div class="video" data-yt="mtkEkg_HcF4" data-hl="de">
+        <a class="video-play" href="https://www.youtube.com/watch?v=mtkEkg_HcF4" rel="noopener" target="_blank" aria-label="Video von Minesweeper abspielen">
+          <img src="../../assets/apps/MineSweeper/de/feature.webp" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">Das Video wird über YouTube abgespielt.</p>
 
       <h2>Über Minesweeper</h2>
       <p>Spiele Minesweeper, den klassischen Denksport — jederzeit, überall und komplett offline. Öffne alle sicheren Felder, ohne eine Mine zu treffen. Die Zahlen verraten dir, wie viele Minen in den Nachbarfeldern liegen!</p>
@@ -276,6 +293,11 @@
       <p>&copy; <span id="year">2026</span> Joost Muijsenberg. Ein Hobbyprojekt, entwickelt in meiner Freizeit. <a href="../../de/">Alle Spiele</a></p>
       <nav class="lang-switch" aria-label="Sprache"><a href="../../MineSweeper/" hreflang="en" lang="en">English</a> · <a href="../../nl/MineSweeper/" hreflang="nl" lang="nl">Nederlands</a> · <strong>Deutsch</strong> · <a href="../../es/MineSweeper/" hreflang="es" lang="es">Español</a> · <a href="../../fr/MineSweeper/" hreflang="fr" lang="fr">Français</a> · <a href="../../pt/MineSweeper/" hreflang="pt" lang="pt">Português</a></nav>
     </footer>
+  </div>
+  <div class="sticky-cta">
+    <img src="../../assets/apps/MineSweeper/icon.png" width="40" height="40" alt="" />
+    <div class="sticky-text"><strong>Minesweeper</strong><span>Kostenlos bei Google Play</span></div>
+    <a class="sticky-btn" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.minesweeper&amp;hl=de&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3DMineSweeper-de-sticky" rel="noopener" target="_blank">Installieren</a>
   </div>
   <script src="../../assets/site.js" defer></script>
 </body>

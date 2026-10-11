@@ -136,7 +136,7 @@
 }
   </script>
 </head>
-<body>
+<body class="app-page has-sticky" style="--app: #ef6c57">
   <div class="container">
     <div class="topbar">
       <nav class="crumbs"><a href="../../es/">Juegos</a> &nbsp;/&nbsp; Sudoku</nav>
@@ -158,12 +158,29 @@
     </div>
 
     <main>
-      <div class="shots">
-        <img src="../../assets/apps/sudoku/es/shot-1.webp" width="340" height="604" alt="Sudoku – menú principal" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/sudoku/es/shot-2.webp" width="340" height="604" alt="Sudoku – partida en curso" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/sudoku/es/shot-3.webp" width="340" height="604" alt="Sudoku – puzle diario" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/sudoku/es/shot-4.webp" width="340" height="604" alt="Sudoku – tienda de temas" loading="lazy" decoding="async" />
+      <div class="shots" data-close="Cerrar" data-prev="Anterior" data-next="Siguiente">
+        <a class="shot" href="../../assets/apps/sudoku/es/shot-1-lg.webp" aria-label="Ampliar captura">
+          <img src="../../assets/apps/sudoku/es/shot-1.webp" width="340" height="604" alt="Sudoku – menú principal" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/sudoku/es/shot-2-lg.webp" aria-label="Ampliar captura">
+          <img src="../../assets/apps/sudoku/es/shot-2.webp" width="340" height="604" alt="Sudoku – partida en curso" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/sudoku/es/shot-3-lg.webp" aria-label="Ampliar captura">
+          <img src="../../assets/apps/sudoku/es/shot-3.webp" width="340" height="604" alt="Sudoku – puzle diario" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/sudoku/es/shot-4-lg.webp" aria-label="Ampliar captura">
+          <img src="../../assets/apps/sudoku/es/shot-4.webp" width="340" height="604" alt="Sudoku – tienda de temas" loading="lazy" decoding="async" />
+        </a>
       </div>
+
+      <h2>Míralo en acción</h2>
+      <div class="video" data-yt="dBLZnaQ-kx8" data-hl="es">
+        <a class="video-play" href="https://www.youtube.com/watch?v=dBLZnaQ-kx8" rel="noopener" target="_blank" aria-label="Reproducir el vídeo de Sudoku">
+          <img src="../../assets/apps/sudoku/es/feature.webp" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">El vídeo se reproduce a través de YouTube.</p>
 
       <h2>Sobre Sudoku</h2>
       <p>Juega al Sudoku, el clásico rompecabezas de números — donde quieras y sin conexión. ¡Rellena la cuadrícula para que cada cifra del 1 al 9 aparezca exactamente una vez en cada fila, columna y caja de 3×3!</p>
@@ -276,6 +293,11 @@
       <p>&copy; <span id="year">2026</span> Joost Muijsenberg. Un proyecto personal, hecho por afición en mi tiempo libre. <a href="../../es/">Todos los juegos</a></p>
       <nav class="lang-switch" aria-label="Idioma"><a href="../../sudoku/" hreflang="en" lang="en">English</a> · <a href="../../nl/sudoku/" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../de/sudoku/" hreflang="de" lang="de">Deutsch</a> · <strong>Español</strong> · <a href="../../fr/sudoku/" hreflang="fr" lang="fr">Français</a> · <a href="../../pt/sudoku/" hreflang="pt" lang="pt">Português</a></nav>
     </footer>
+  </div>
+  <div class="sticky-cta">
+    <img src="../../assets/apps/sudoku/icon.png" width="40" height="40" alt="" />
+    <div class="sticky-text"><strong>Sudoku</strong><span>Gratis en Google Play</span></div>
+    <a class="sticky-btn" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.sudoku&amp;hl=es&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3Dsudoku-es-sticky" rel="noopener" target="_blank">Instalar</a>
   </div>
   <script src="../../assets/site.js" defer></script>
 </body>

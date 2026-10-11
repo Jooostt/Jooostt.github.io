@@ -145,10 +145,21 @@
 </head>
 <body>
   <div class="container">
-    <header class="site">
+    <header class="home-hero">
       <nav class="lang-switch" aria-label="Sprache"><a href="../" hreflang="en" lang="en">English</a> · <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a> · <strong>Deutsch</strong> · <a href="../es/" hreflang="es" lang="es">Español</a> · <a href="../fr/" hreflang="fr" lang="fr">Français</a> · <a href="../pt/" hreflang="pt" lang="pt">Português</a></nav>
-      <h1>Joost Muijsenberg</h1>
-      <p>Kostenlose Rätsel- und Kartenspiele für Android &mdash; kein Konto, offline spielbar, und die Werbung lässt sich mit einem optionalen Kauf entfernen.</p>
+      <div class="home-hero-grid">
+        <div class="home-hero-text">
+          <p class="eyebrow">Joost Muijsenberg</p>
+          <h1>Klassische Rätsel- und Kartenspiele für Android</h1>
+          <p class="hero-tagline">Kleine, klassische Spiele, die ich in meiner Freizeit entwickle. Die Werbung lässt sich mit einem optionalen Kauf entfernen.</p>
+          <ul class="pills"><li>Kostenlos</li><li>Offline spielbar</li><li>Kein Konto</li></ul>
+        </div>
+        <div class="hero-phones" aria-hidden="true">
+          <img src="../assets/apps/sudoku/de/shot-2.webp" width="340" height="604" alt="" />
+          <img src="../assets/apps/wordsearch/de/shot-2.webp" width="340" height="604" alt="" />
+          <img src="../assets/apps/hartenjagen/de/shot-2.webp" width="340" height="604" alt="" />
+        </div>
+      </div>
     </header>
 
     <main>
@@ -192,94 +203,124 @@
         </a>
       </div>
 
+      <h2>Empfohlen</h2>
+      <section class="featured" style="--app: #1fb5a8">
+      <div class="video" data-yt="2IIrv809Nyw" data-hl="de">
+        <a class="video-play" href="https://www.youtube.com/watch?v=2IIrv809Nyw" rel="noopener" target="_blank" aria-label="Video von 30 Seconds abspielen">
+          <img src="../assets/apps/30-seconds/de/feature.webp" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">Das Video wird über YouTube abgespielt.</p>
+        <div class="featured-text">
+          <img class="card-icon" src="../assets/apps/30-seconds/icon.png" width="64" height="64" alt="" />
+          <h3>30 Seconds</h3>
+          <p>Beschreibe 5 Wörter in 30 Sekunden! Ein lustiges Wortspiel für Freunde.</p>
+          <div class="featured-actions">
+            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.thirtyseconds&amp;hl=de&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3Dfeatured-de" rel="noopener" target="_blank">
+              <img src="../assets/google-play-badge.png" width="323" height="125" alt="30 Seconds - Party Game bei Google Play herunterladen" />
+            </a>
+            <a href="30-seconds/">Mehr über 30 Seconds</a>
+          </div>
+        </div>
+      </section>
+
       <h2>Spiele</h2>
       <p class="lead">9 dieser Spiele gibt es schon bei Google Play; die anderen folgen bald. Jedes Spiel hat eine eigene Seite mit Screenshots, Beschreibung, häufigen Fragen, Datenschutzerklärung und Nutzungsbedingungen.</p>
-      <div class="card-grid">
-        <a class="card" href="mergepuzzle/">
+      <div class="filters" role="group" aria-label="Spiele filtern" hidden>
+        <button type="button" class="filter" data-cat="all" aria-pressed="true">Alle</button>
+        <button type="button" class="filter" data-cat="puzzle" aria-pressed="false">Rätsel</button>
+        <button type="button" class="filter" data-cat="word" aria-pressed="false">Wortspiele</button>
+        <button type="button" class="filter" data-cat="card" aria-pressed="false">Kartenspiele</button>
+        <button type="button" class="filter" data-cat="party" aria-pressed="false">Partyspiele</button>
+        <button type="button" class="filter" data-cat="quiz" aria-pressed="false">Quiz</button>
+      </div>
+      <div class="card-grid" id="games">
+        <a class="card" href="mergepuzzle/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/mergepuzzle/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>2048 Merge</h3>
           <p>Schiebe und verschmelze Kacheln bis 2048. Jeden Tag eine neue Challenge.</p>
           <span class="tag tag-soon">Demnächst</span>
         </a>
-        <a class="card" href="30-seconds/">
+        <a class="card" href="30-seconds/" data-cat="party">
           <img class="card-icon" src="../assets/apps/30-seconds/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>30 Seconds</h3>
           <p>Beschreibe 5 Wörter in 30 Sekunden! Ein lustiges Wortspiel für Freunde.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="blockpuzzle/">
+        <a class="card" href="blockpuzzle/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/blockpuzzle/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Blockpuzzle</h3>
           <p>Füll das Brett exakt aus. Immer lösbar, jeden Tag eine neue Aufgabe.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="colorsort/">
+        <a class="card" href="colorsort/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/colorsort/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Farben Sortieren</h3>
           <p>Das klassische Sortier-Puzzle. Endlose Level und täglich ein neues Rätsel.</p>
           <span class="tag tag-soon">Demnächst</span>
         </a>
-        <a class="card" href="hartenjagen/">
+        <a class="card" href="hartenjagen/" data-cat="card">
           <img class="card-icon" src="../assets/apps/hartenjagen/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Hearts</h3>
           <p>Das klassische Kartenspiel. Offline gegen clevere Computergegner spielen.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="crossword/">
+        <a class="card" href="crossword/" data-cat="word">
           <img class="card-icon" src="../assets/apps/crossword/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Kreuzworträtsel</h3>
           <p>Das klassische Kreuzworträtsel. Endlos viele Rätsel, jeden Tag ein neues.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="cryptogram/">
+        <a class="card" href="cryptogram/" data-cat="word">
           <img class="card-icon" src="../assets/apps/cryptogram/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Kryptogramm</h3>
           <p>Knacke den Code: gleicher Buchstabe, gleiche Zahl. Täglich ein neues Rätsel.</p>
           <span class="tag tag-soon">Demnächst</span>
         </a>
-        <a class="card" href="countryquiz/">
+        <a class="card" href="countryquiz/" data-cat="quiz">
           <img class="card-icon" src="../assets/apps/countryquiz/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Länderquiz</h3>
           <p>193 Länder: Flaggen, Hauptstädte und mehr. Jeden Tag ein neues Quiz.</p>
           <span class="tag tag-soon">Demnächst</span>
         </a>
-        <a class="card" href="MineSweeper/">
+        <a class="card" href="MineSweeper/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/MineSweeper/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Minesweeper</h3>
           <p>Der Minesweeper-Klassiker. Endlose Minenfelder und täglich ein neues Rätsel.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="nonogram/">
+        <a class="card" href="nonogram/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/nonogram/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Nonogram</h3>
           <p>Klassisches Nonogram. Endlose Rätsel und täglich eine neue Herausforderung.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="pipeconnect/">
+        <a class="card" href="pipeconnect/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/pipeconnect/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Rohre Verbinden</h3>
           <p>Verbinde die Rohre und fülle das ganze Brett. Jeden Tag ein neues Rätsel.</p>
           <span class="tag tag-soon">Demnächst</span>
         </a>
-        <a class="card" href="sudoku/">
+        <a class="card" href="sudoku/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/sudoku/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Sudoku</h3>
           <p>Klassisches Sudoku. Endlose Rätsel und täglich eine neue Herausforderung.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="wordconnect/">
+        <a class="card" href="wordconnect/" data-cat="word">
           <img class="card-icon" src="../assets/apps/wordconnect/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Word Connect</h3>
           <p>Verbinde Buchstaben zu Wörtern. Endlose Rätsel und täglich neue Herausforderung.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="wordsearch/">
+        <a class="card" href="wordsearch/" data-cat="word">
           <img class="card-icon" src="../assets/apps/wordsearch/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Wortsuche</h3>
           <p>Die klassische Wortsuche. Endlose Rätsel und täglich neue Herausforderung.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="numbermatch/">
+        <a class="card" href="numbermatch/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/numbermatch/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Zahlen Verbinden</h3>
           <p>Verbinde Zahlen, die 10 ergeben. Jeden Tag ein neues Rätsel, komplett offline.</p>

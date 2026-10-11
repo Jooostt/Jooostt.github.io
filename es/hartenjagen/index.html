@@ -128,7 +128,7 @@
 }
   </script>
 </head>
-<body>
+<body class="app-page has-sticky" style="--app: #e8395a">
   <div class="container">
     <div class="topbar">
       <nav class="crumbs"><a href="../../es/">Juegos</a> &nbsp;/&nbsp; Corazones</nav>
@@ -150,12 +150,29 @@
     </div>
 
     <main>
-      <div class="shots">
-        <img src="../../assets/apps/hartenjagen/es/shot-1.webp" width="340" height="604" alt="Corazones – menú principal" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/hartenjagen/es/shot-2.webp" width="340" height="604" alt="Corazones – partida en curso" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/hartenjagen/es/shot-3.webp" width="340" height="604" alt="Corazones – pantalla de victoria con puntos" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/hartenjagen/es/shot-4.webp" width="340" height="604" alt="Corazones – ajustes de reglas" loading="lazy" decoding="async" />
+      <div class="shots" data-close="Cerrar" data-prev="Anterior" data-next="Siguiente">
+        <a class="shot" href="../../assets/apps/hartenjagen/es/shot-1-lg.webp" aria-label="Ampliar captura">
+          <img src="../../assets/apps/hartenjagen/es/shot-1.webp" width="340" height="604" alt="Corazones – menú principal" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/hartenjagen/es/shot-2-lg.webp" aria-label="Ampliar captura">
+          <img src="../../assets/apps/hartenjagen/es/shot-2.webp" width="340" height="604" alt="Corazones – partida en curso" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/hartenjagen/es/shot-3-lg.webp" aria-label="Ampliar captura">
+          <img src="../../assets/apps/hartenjagen/es/shot-3.webp" width="340" height="604" alt="Corazones – pantalla de victoria con puntos" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/hartenjagen/es/shot-4-lg.webp" aria-label="Ampliar captura">
+          <img src="../../assets/apps/hartenjagen/es/shot-4.webp" width="340" height="604" alt="Corazones – ajustes de reglas" loading="lazy" decoding="async" />
+        </a>
       </div>
+
+      <h2>Míralo en acción</h2>
+      <div class="video" data-yt="TSJ6DIbjPaY" data-hl="es">
+        <a class="video-play" href="https://www.youtube.com/watch?v=TSJ6DIbjPaY" rel="noopener" target="_blank" aria-label="Reproducir el vídeo de Corazones">
+          <img src="../../assets/apps/hartenjagen/es/feature.webp" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">El vídeo se reproduce a través de YouTube.</p>
 
       <h2>Sobre Corazones</h2>
       <p>Juega a Corazones, el clásico juego de cartas: en cualquier momento y lugar, totalmente sin conexión. Tú contra tres jugadores de la máquina: ¿quién acumula menos puntos de penalización?</p>
@@ -255,6 +272,11 @@
       <p>&copy; <span id="year">2026</span> Joost Muijsenberg. Un proyecto personal, hecho por afición en mi tiempo libre. <a href="../../es/">Todos los juegos</a></p>
       <nav class="lang-switch" aria-label="Idioma"><a href="../../hartenjagen/" hreflang="en" lang="en">English</a> · <a href="../../nl/hartenjagen/" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../de/hartenjagen/" hreflang="de" lang="de">Deutsch</a> · <strong>Español</strong> · <a href="../../fr/hartenjagen/" hreflang="fr" lang="fr">Français</a> · <a href="../../pt/hartenjagen/" hreflang="pt" lang="pt">Português</a></nav>
     </footer>
+  </div>
+  <div class="sticky-cta">
+    <img src="../../assets/apps/hartenjagen/icon.png" width="40" height="40" alt="" />
+    <div class="sticky-text"><strong>Corazones</strong><span>Gratis en Google Play</span></div>
+    <a class="sticky-btn" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.hearts&amp;hl=es&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3Dhartenjagen-es-sticky" rel="noopener" target="_blank">Instalar</a>
   </div>
   <script src="../../assets/site.js" defer></script>
 </body>

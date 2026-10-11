@@ -135,7 +135,7 @@
 }
   </script>
 </head>
-<body>
+<body class="app-page" style="--app: #e3a33b">
   <div class="container">
     <div class="topbar">
       <nav class="crumbs"><a href="../">Games</a> &nbsp;/&nbsp; 2048 Merge</nav>
@@ -155,11 +155,19 @@
     </div>
 
     <main>
-      <div class="shots">
-        <img src="../assets/apps/mergepuzzle/shot-1.webp" width="340" height="604" alt="2048 Merge – main menu" loading="lazy" decoding="async" />
-        <img src="../assets/apps/mergepuzzle/shot-2.webp" width="340" height="604" alt="2048 Merge – gameplay" loading="lazy" decoding="async" />
-        <img src="../assets/apps/mergepuzzle/shot-3.webp" width="340" height="604" alt="2048 Merge – daily challenge" loading="lazy" decoding="async" />
-        <img src="../assets/apps/mergepuzzle/shot-4.webp" width="340" height="604" alt="2048 Merge – shop with themes" loading="lazy" decoding="async" />
+      <div class="shots" data-close="Close" data-prev="Previous" data-next="Next">
+        <a class="shot" href="../assets/apps/mergepuzzle/shot-1-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/mergepuzzle/shot-1.webp" width="340" height="604" alt="2048 Merge – main menu" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../assets/apps/mergepuzzle/shot-2-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/mergepuzzle/shot-2.webp" width="340" height="604" alt="2048 Merge – gameplay" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../assets/apps/mergepuzzle/shot-3-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/mergepuzzle/shot-3.webp" width="340" height="604" alt="2048 Merge – daily challenge" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../assets/apps/mergepuzzle/shot-4-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/mergepuzzle/shot-4.webp" width="340" height="604" alt="2048 Merge – shop with themes" loading="lazy" decoding="async" />
+        </a>
       </div>
 
       <h2>About 2048 Merge</h2>

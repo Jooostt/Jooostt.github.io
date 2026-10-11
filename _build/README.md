@@ -20,3 +20,7 @@ py -3 _build/build.py
 
 Niet gegenereerd: `privacy.html` en `terms.html` (vaste URL's voor Play Console) en de pagina's
 van de conceptapps (Forbidden Words, FactFlow, Aquarium, Butterfly Garden).
+
+**Ontwerp-instellingen** in `apps.py`: `color` (accentkleur van de app-pagina), `cat` (filter op de
+homepage), `FEATURED` (uitgelicht spel met video) en `HERO_SHOTS` (de drie telefoons in de kop).
+De video-ID's staan in `videos.py` (uit de Play-listings); de video laadt pas na een klik, via youtube-nocookie.

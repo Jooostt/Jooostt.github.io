@@ -136,7 +136,7 @@
 }
   </script>
 </head>
-<body>
+<body class="app-page has-sticky" style="--app: #e8546d">
   <div class="container">
     <div class="topbar">
       <nav class="crumbs"><a href="../">Games</a> &nbsp;/&nbsp; Word Connect</nav>
@@ -158,12 +158,29 @@
     </div>
 
     <main>
-      <div class="shots">
-        <img src="../assets/apps/wordconnect/shot-1.webp" width="340" height="604" alt="Word Connect – main menu" loading="lazy" decoding="async" />
-        <img src="../assets/apps/wordconnect/shot-2.webp" width="340" height="604" alt="Word Connect – gameplay" loading="lazy" decoding="async" />
-        <img src="../assets/apps/wordconnect/shot-3.webp" width="340" height="604" alt="Word Connect – daily puzzle" loading="lazy" decoding="async" />
-        <img src="../assets/apps/wordconnect/shot-4.webp" width="340" height="604" alt="Word Connect – shop with themes" loading="lazy" decoding="async" />
+      <div class="shots" data-close="Close" data-prev="Previous" data-next="Next">
+        <a class="shot" href="../assets/apps/wordconnect/shot-1-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/wordconnect/shot-1.webp" width="340" height="604" alt="Word Connect – main menu" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../assets/apps/wordconnect/shot-2-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/wordconnect/shot-2.webp" width="340" height="604" alt="Word Connect – gameplay" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../assets/apps/wordconnect/shot-3-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/wordconnect/shot-3.webp" width="340" height="604" alt="Word Connect – daily puzzle" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../assets/apps/wordconnect/shot-4-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/wordconnect/shot-4.webp" width="340" height="604" alt="Word Connect – shop with themes" loading="lazy" decoding="async" />
+        </a>
       </div>
+
+      <h2>See it in action</h2>
+      <div class="video" data-yt="neEZFIS-lMI" data-hl="en">
+        <a class="video-play" href="https://www.youtube.com/watch?v=neEZFIS-lMI" rel="noopener" target="_blank" aria-label="Play the Word Connect video">
+          <img src="../assets/apps/wordconnect/feature.webp" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">The video plays via YouTube.</p>
 
       <h2>About Word Connect</h2>
       <p>Play Word Connect, the addictive word puzzle — anytime, anywhere, fully offline. Swipe across the letters on the wheel and fill the crossword grid!</p>
@@ -279,6 +296,11 @@
       <p>&copy; <span id="year">2026</span> Joost Muijsenberg. A hobby project, made in my spare time. <a href="../">All games</a></p>
       <nav class="lang-switch" aria-label="Language"><strong>English</strong> · <a href="../nl/wordconnect/" hreflang="nl" lang="nl">Nederlands</a> · <a href="../de/wordconnect/" hreflang="de" lang="de">Deutsch</a> · <a href="../es/wordconnect/" hreflang="es" lang="es">Español</a> · <a href="../fr/wordconnect/" hreflang="fr" lang="fr">Français</a> · <a href="../pt/wordconnect/" hreflang="pt" lang="pt">Português</a></nav>
     </footer>
+  </div>
+  <div class="sticky-cta">
+    <img src="../assets/apps/wordconnect/icon.png" width="40" height="40" alt="" />
+    <div class="sticky-text"><strong>Word Connect</strong><span>Free on Google Play</span></div>
+    <a class="sticky-btn" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.wordconnect&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3Dwordconnect-en-sticky" rel="noopener" target="_blank">Install</a>
   </div>
   <script src="../assets/site.js" defer></script>
 </body>

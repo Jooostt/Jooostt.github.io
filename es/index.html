@@ -145,10 +145,21 @@
 </head>
 <body>
   <div class="container">
-    <header class="site">
+    <header class="home-hero">
       <nav class="lang-switch" aria-label="Idioma"><a href="../" hreflang="en" lang="en">English</a> · <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a> · <a href="../de/" hreflang="de" lang="de">Deutsch</a> · <strong>Español</strong> · <a href="../fr/" hreflang="fr" lang="fr">Français</a> · <a href="../pt/" hreflang="pt" lang="pt">Português</a></nav>
-      <h1>Joost Muijsenberg</h1>
-      <p>Juegos de lógica y de cartas gratis para Android &mdash; sin cuenta, sin conexión y con anuncios que puedes quitar con una compra opcional.</p>
+      <div class="home-hero-grid">
+        <div class="home-hero-text">
+          <p class="eyebrow">Joost Muijsenberg</p>
+          <h1>Juegos clásicos de lógica y de cartas para Android</h1>
+          <p class="hero-tagline">Juegos pequeños y clásicos que hago en mi tiempo libre. Los anuncios se quitan con una compra opcional.</p>
+          <ul class="pills"><li>Gratis</li><li>Sin conexión</li><li>Sin cuenta</li></ul>
+        </div>
+        <div class="hero-phones" aria-hidden="true">
+          <img src="../assets/apps/sudoku/es/shot-2.webp" width="340" height="604" alt="" />
+          <img src="../assets/apps/wordsearch/es/shot-2.webp" width="340" height="604" alt="" />
+          <img src="../assets/apps/hartenjagen/es/shot-2.webp" width="340" height="604" alt="" />
+        </div>
+      </div>
     </header>
 
     <main>
@@ -192,94 +203,124 @@
         </a>
       </div>
 
+      <h2>Juego destacado</h2>
+      <section class="featured" style="--app: #1fb5a8">
+      <div class="video" data-yt="bKMwIpCDeJ0" data-hl="es">
+        <a class="video-play" href="https://www.youtube.com/watch?v=bKMwIpCDeJ0" rel="noopener" target="_blank" aria-label="Reproducir el vídeo de 30 Seconds">
+          <img src="../assets/apps/30-seconds/es/feature.webp" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">El vídeo se reproduce a través de YouTube.</p>
+        <div class="featured-text">
+          <img class="card-icon" src="../assets/apps/30-seconds/icon.png" width="64" height="64" alt="" />
+          <h3>30 Seconds</h3>
+          <p>¡Describe 5 palabras en 30 segundos! Un divertido juego de palabras con amigos.</p>
+          <div class="featured-actions">
+            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.thirtyseconds&amp;hl=es&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3Dfeatured-es" rel="noopener" target="_blank">
+              <img src="../assets/google-play-badge.png" width="323" height="125" alt="Descarga 30 Seconds - Party Game en Google Play" />
+            </a>
+            <a href="30-seconds/">Más sobre 30 Seconds</a>
+          </div>
+        </div>
+      </section>
+
       <h2>Juegos</h2>
       <p class="lead">9 de estos juegos ya están en Google Play; los demás llegarán pronto. Cada juego tiene su propia página con capturas, descripción, preguntas frecuentes, política de privacidad y condiciones de uso.</p>
-      <div class="card-grid">
-        <a class="card" href="mergepuzzle/">
+      <div class="filters" role="group" aria-label="Filtrar juegos" hidden>
+        <button type="button" class="filter" data-cat="all" aria-pressed="true">Todos</button>
+        <button type="button" class="filter" data-cat="puzzle" aria-pressed="false">Puzles</button>
+        <button type="button" class="filter" data-cat="word" aria-pressed="false">Palabras</button>
+        <button type="button" class="filter" data-cat="card" aria-pressed="false">Cartas</button>
+        <button type="button" class="filter" data-cat="party" aria-pressed="false">Para fiestas</button>
+        <button type="button" class="filter" data-cat="quiz" aria-pressed="false">Quiz</button>
+      </div>
+      <div class="card-grid" id="games">
+        <a class="card" href="mergepuzzle/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/mergepuzzle/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>2048 Merge</h3>
           <p>Desliza y fusiona fichas hasta 2048. Partidas infinitas y un desafío diario.</p>
           <span class="tag tag-soon">Muy pronto</span>
         </a>
-        <a class="card" href="30-seconds/">
+        <a class="card" href="30-seconds/" data-cat="party">
           <img class="card-icon" src="../assets/apps/30-seconds/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>30 Seconds</h3>
           <p>¡Describe 5 palabras en 30 segundos! Un divertido juego de palabras con amigos.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="MineSweeper/">
+        <a class="card" href="MineSweeper/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/MineSweeper/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Buscaminas</h3>
           <p>El buscaminas clásico. Campos de minas infinitos y un reto nuevo cada día.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="pipeconnect/">
+        <a class="card" href="pipeconnect/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/pipeconnect/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Conectar Tuberías</h3>
           <p>Conecta las tuberías y llena todo el tablero. Un puzle nuevo cada día.</p>
           <span class="tag tag-soon">Muy pronto</span>
         </a>
-        <a class="card" href="hartenjagen/">
+        <a class="card" href="hartenjagen/" data-cat="card">
           <img class="card-icon" src="../assets/apps/hartenjagen/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Corazones</h3>
           <p>El clásico juego de cartas. Juega sin conexión contra rivales inteligentes.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="cryptogram/">
+        <a class="card" href="cryptogram/" data-cat="word">
           <img class="card-icon" src="../assets/apps/cryptogram/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Criptograma</h3>
           <p>Descifra el código: misma letra, mismo número. Un puzle nuevo cada día.</p>
           <span class="tag tag-soon">Muy pronto</span>
         </a>
-        <a class="card" href="crossword/">
+        <a class="card" href="crossword/" data-cat="word">
           <img class="card-icon" src="../assets/apps/crossword/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Crucigrama</h3>
           <p>El crucigrama clásico. Puzles infinitos y un reto diario nuevo.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="nonogram/">
+        <a class="card" href="nonogram/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/nonogram/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Nonogram</h3>
           <p>El nonogram clásico. Puzles infinitos y un reto nuevo cada día.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="colorsort/">
+        <a class="card" href="colorsort/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/colorsort/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Ordenar Colores</h3>
           <p>El clásico puzle de ordenar. Niveles infinitos y un nuevo reto cada día.</p>
           <span class="tag tag-soon">Muy pronto</span>
         </a>
-        <a class="card" href="blockpuzzle/">
+        <a class="card" href="blockpuzzle/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/blockpuzzle/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Puzle de bloques</h3>
           <p>Rellena el tablero por completo. Siempre resoluble, un reto nuevo cada día.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="countryquiz/">
+        <a class="card" href="countryquiz/" data-cat="quiz">
           <img class="card-icon" src="../assets/apps/countryquiz/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Quiz de Países</h3>
           <p>193 países: banderas, capitales y más. Un quiz nuevo cada día.</p>
           <span class="tag tag-soon">Muy pronto</span>
         </a>
-        <a class="card" href="wordsearch/">
+        <a class="card" href="wordsearch/" data-cat="word">
           <img class="card-icon" src="../assets/apps/wordsearch/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Sopa de Letras</h3>
           <p>La clásica sopa de letras. Puzles infinitos y un nuevo reto cada día.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="sudoku/">
+        <a class="card" href="sudoku/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/sudoku/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Sudoku</h3>
           <p>El sudoku clásico. Puzles infinitos y un reto nuevo cada día.</p>
           <span class="tag">Google Play</span>
         </a>
-        <a class="card" href="numbermatch/">
+        <a class="card" href="numbermatch/" data-cat="puzzle">
           <img class="card-icon" src="../assets/apps/numbermatch/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Unir Números</h3>
           <p>Une números que suman 10. Un desafío nuevo cada día, sin conexión.</p>
           <span class="tag tag-soon">Muy pronto</span>
         </a>
-        <a class="card" href="wordconnect/">
+        <a class="card" href="wordconnect/" data-cat="word">
           <img class="card-icon" src="../assets/apps/wordconnect/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Word Connect</h3>
           <p>Conecta letras y forma palabras. Puzles infinitos y un nuevo reto cada día.</p>

@@ -128,7 +128,7 @@
 }
   </script>
 </head>
-<body>
+<body class="app-page has-sticky" style="--app: #1fb5a8">
   <div class="container">
     <div class="topbar">
       <nav class="crumbs"><a href="../">Games</a> &nbsp;/&nbsp; 30 Seconds</nav>
@@ -150,12 +150,29 @@
     </div>
 
     <main>
-      <div class="shots">
-        <img src="../assets/apps/30-seconds/shot-1.webp" width="340" height="604" alt="30 Seconds – setting up the teams" loading="lazy" decoding="async" />
-        <img src="../assets/apps/30-seconds/shot-2.webp" width="340" height="604" alt="30 Seconds – gameplay" loading="lazy" decoding="async" />
-        <img src="../assets/apps/30-seconds/shot-3.webp" width="340" height="604" alt="30 Seconds – scoring a round" loading="lazy" decoding="async" />
-        <img src="../assets/apps/30-seconds/shot-4.webp" width="340" height="604" alt="30 Seconds – the winning team" loading="lazy" decoding="async" />
+      <div class="shots" data-close="Close" data-prev="Previous" data-next="Next">
+        <a class="shot" href="../assets/apps/30-seconds/shot-1-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/30-seconds/shot-1.webp" width="340" height="604" alt="30 Seconds – setting up the teams" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../assets/apps/30-seconds/shot-2-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/30-seconds/shot-2.webp" width="340" height="604" alt="30 Seconds – gameplay" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../assets/apps/30-seconds/shot-3-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/30-seconds/shot-3.webp" width="340" height="604" alt="30 Seconds – scoring a round" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../assets/apps/30-seconds/shot-4-lg.webp" aria-label="Enlarge screenshot">
+          <img src="../assets/apps/30-seconds/shot-4.webp" width="340" height="604" alt="30 Seconds – the winning team" loading="lazy" decoding="async" />
+        </a>
       </div>
+
+      <h2>See it in action</h2>
+      <div class="video" data-yt="fcvrt8-YqI8" data-hl="en">
+        <a class="video-play" href="https://www.youtube.com/watch?v=fcvrt8-YqI8" rel="noopener" target="_blank" aria-label="Play the 30 Seconds video">
+          <img src="../assets/apps/30-seconds/feature.webp" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">The video plays via YouTube.</p>
 
       <h2>About 30 Seconds</h2>
       <p>Play 30 Seconds, the fast and funny word-guessing party game that turns any get-together into a lively contest. Grab your friends, family or colleagues, pick your teams and get ready to laugh, shout and beat the clock.</p>
@@ -268,6 +285,11 @@
       <p>&copy; <span id="year">2026</span> Joost Muijsenberg. A hobby project, made in my spare time. <a href="../">All games</a></p>
       <nav class="lang-switch" aria-label="Language"><strong>English</strong> · <a href="../nl/30-seconds/" hreflang="nl" lang="nl">Nederlands</a> · <a href="../de/30-seconds/" hreflang="de" lang="de">Deutsch</a> · <a href="../es/30-seconds/" hreflang="es" lang="es">Español</a> · <a href="../fr/30-seconds/" hreflang="fr" lang="fr">Français</a> · <a href="../pt/30-seconds/" hreflang="pt" lang="pt">Português</a></nav>
     </footer>
+  </div>
+  <div class="sticky-cta">
+    <img src="../assets/apps/30-seconds/icon.png" width="40" height="40" alt="" />
+    <div class="sticky-text"><strong>30 Seconds</strong><span>Free on Google Play</span></div>
+    <a class="sticky-btn" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.thirtyseconds&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3D30-seconds-en-sticky" rel="noopener" target="_blank">Install</a>
   </div>
   <script src="../assets/site.js" defer></script>
 </body>

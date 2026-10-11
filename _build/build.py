@@ -17,9 +17,10 @@ import sys
 from urllib.parse import quote
 
 sys.path.insert(0, os.path.dirname(__file__))
-from apps import APPS, BY_SLUG  # noqa: E402
-from i18n import AUTONYM, FAQ, LANGS, OG_LOCALE, SHOT, UI, heading  # noqa: E402
+from apps import APPS, BY_SLUG, CATEGORIES, FEATURED, HERO_SHOTS  # noqa: E402
+from i18n import AUTONYM, DESIGN, FAQ, LANGS, OG_LOCALE, SHOT, UI, heading  # noqa: E402
 from listing import ROOT, meta_file, parse_description  # noqa: E402
+from videos import VIDEOS  # noqa: E402
 
 SITE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BASE = 'https://jooostt.github.io/'
@@ -28,13 +29,13 @@ TODAY = datetime.date.today().isoformat()
 
 # Conceptapps die op de Engelse homepage blijven staan zoals ze waren.
 EN_CONCEPT_CARDS = [
-    ('Forbidden Words', '''        <a class="card" href="forbidden-words/">
+    ('Forbidden Words', '''        <a class="card" href="forbidden-words/" data-cat="party">
           <img class="card-icon" src="assets/apps/forbidden-words/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>Forbidden Words</h3>
           <p>Explain the word without saying it! A fast and funny party word game for friends and family.</p>
           <span class="tag tag-soon">Coming soon</span>
         </a>'''),
-    ('FactFlow', '''        <a class="card" href="factflow/">
+    ('FactFlow', '''        <a class="card" href="factflow/" data-cat="quiz">
           <img class="card-icon" src="assets/apps/factflow/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>FactFlow</h3>
           <p>Swipe through facts like shorts, but fully offline.</p>
@@ -98,17 +99,34 @@ def load(app, lang):
     }
 
 
-def convert_shots(app, lang, data):
-    """Vertaalde schermafbeeldingen in hetzelfde formaat als de Engelse (340x604 webp)."""
+def asset_dir(app, lang):
+    """Map met de beelden van een app in een taal; Engels staat direct in de app-map."""
+    return f'assets/apps/{app["slug"]}/' + ('' if lang == 'en' else f'{lang}/')
+
+
+def _webp(src, dst, size, quality=80):
     from PIL import Image
-    out_dir = os.path.join(SITE, 'assets', 'apps', app['slug'], lang)
+    if os.path.exists(dst) and os.path.getmtime(dst) >= os.path.getmtime(src):
+        return
+    im = Image.open(src).convert('RGB')
+    if size[1] is None:
+        size = (size[0], round(im.height * size[0] / im.width))
+    im.resize(size, Image.LANCZOS).save(dst, 'WEBP', quality=quality, method=6)
+
+
+def convert_shots(app, lang, data):
+    """Schermafbeeldingen klein (340x604, de Engelse bestaan al) en groot (540x960, voor de
+    vergroting), plus de feature graphic als voorbeeldbeeld voor de video."""
+    out_dir = os.path.join(SITE, asset_dir(app, lang))
     os.makedirs(out_dir, exist_ok=True)
     for i, src in enumerate(data['shots'], 1):
-        dst = os.path.join(out_dir, f'shot-{i}.webp')
-        if os.path.exists(dst) and os.path.getmtime(dst) >= os.path.getmtime(src):
-            continue
-        im = Image.open(src).convert('RGB').resize((340, 604), Image.LANCZOS)
-        im.save(dst, 'WEBP', quality=80, method=6)
+        if lang != 'en':
+            _webp(src, os.path.join(out_dir, f'shot-{i}.webp'), (340, 604))
+        _webp(src, os.path.join(out_dir, f'shot-{i}-lg.webp'), (540, 960), 78)
+    feature = os.path.join(ROOT, app['dir'], 'PlayStoreAssets', 'screenshots', lang, f'{lang}_feature-graphic.png')
+    if os.path.exists(feature):
+        _webp(feature, os.path.join(out_dir, 'feature.webp'), (960, None), 82)
+    data['has_feature'] = os.path.exists(feature)
 
 
 def shot_alt(lang, name, src):
@@ -207,6 +225,20 @@ def related_card(lang, slug, rel, all_data):
         </a>'''
 
 
+def video_block(app, lang, data, pre):
+    """Video die pas bij een klik van YouTube laadt (youtube-nocookie); tot dan alleen een eigen beeld."""
+    vid = VIDEOS[app['slug']][lang]
+    dz = DESIGN[lang]
+    poster = f'{pre}{asset_dir(app, lang)}feature.webp' if data.get('has_feature') else f'{pre}assets/apps/{app["slug"]}/og.jpg'
+    return f'''      <div class="video" data-yt="{vid}" data-hl="{lang}">
+        <a class="video-play" href="https://www.youtube.com/watch?v={vid}" rel="noopener" target="_blank" aria-label="{e(dz["play_video"].format(name=data["name"]))}">
+          <img src="{poster}" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">{dz["video_note"]}</p>'''
+
+
 def app_page(app, lang, all_data):
     data = all_data[app['slug']][lang]
     u = UI[lang]
@@ -257,9 +289,28 @@ def app_page(app, lang, all_data):
     else:
         cta = f'      <p class="pill">{u["soon_pill"]}</p>'
 
+    dz = DESIGN[lang]
     shots = '\n'.join(
-        f'        <img src="{shot_dir}shot-{i}.webp" width="340" height="604" alt="{e(shot_alt(lang, name, src))}" loading="lazy" decoding="async" />'
+        f'''        <a class="shot" href="{shot_dir}shot-{i}-lg.webp" aria-label="{e(dz["enlarge"])}">
+          <img src="{shot_dir}shot-{i}.webp" width="340" height="604" alt="{e(shot_alt(lang, name, src))}" loading="lazy" decoding="async" />
+        </a>'''
         for i, src in enumerate(data['shots'], 1))
+
+    video = ''
+    if app['live'] and slug in VIDEOS:
+        video = f'''
+      <h2>{dz["video_h"]}</h2>
+{video_block(app, lang, data, pre)}
+'''
+
+    sticky = ''
+    if app['live']:
+        sticky = f'''
+  <div class="sticky-cta">
+    <img src="{pre}assets/apps/{slug}/icon.png" width="40" height="40" alt="" />
+    <div class="sticky-text"><strong>{e(name)}</strong><span>{dz["sticky_sub"]}</span></div>
+    <a class="sticky-btn" href="{e(play_url(app, lang, f"{slug}-{lang}-sticky"))}" rel="noopener" target="_blank">{dz["install"]}</a>
+  </div>'''
 
     features = '\n'.join(f'''      <section class="feature">
         <h3><span class="feature-emoji" aria-hidden="true">{s["emoji"]}</span>{e(heading(lang, s["title"]))}</h3>
@@ -276,7 +327,7 @@ def app_page(app, lang, all_data):
     mail = f'<a href="mailto:{MAIL}">{MAIL}</a>'
 
     return f'''{head(lang, slug, title, desc, og, [soft, crumbs, faq_ld])}
-<body>
+<body class="app-page{' has-sticky' if app['live'] else ''}" style="--app: {app['color']}">
   <div class="container">
     <div class="topbar">
       <nav class="crumbs"><a href="{pre}{page_path(lang)}">{u["games"]}</a> &nbsp;/&nbsp; {e(name)}</nav>
@@ -296,10 +347,10 @@ def app_page(app, lang, all_data):
     </div>
 
     <main>
-      <div class="shots">
+      <div class="shots" data-close="{e(dz["close"])}" data-prev="{e(dz["prev"])}" data-next="{e(dz["next"])}">
 {shots}
       </div>
-
+{video}
       <h2>{e(u["about_h"].format(name=name))}</h2>
       <p>{e(data["intro"])}</p>
 
@@ -335,7 +386,7 @@ def app_page(app, lang, all_data):
       <p>&copy; <span id="year">{TODAY[:4]}</span> Joost Muijsenberg. {u["hobby"]} <a href="{pre}{page_path(lang)}">{u["all_games"]}</a></p>
       {lang_switch(lang, slug)}
     </footer>
-  </div>
+  </div>{sticky}
   <script src="{pre}assets/site.js" defer></script>
 </body>
 </html>
@@ -347,10 +398,11 @@ def home_page(lang, all_data):
     pre = prefix(lang)
     live = [a for a in APPS if a['live']]
     cards = []
+    dz = DESIGN[lang]
     for a in APPS:
         d = all_data[a['slug']][lang]
         tag = f'<span class="tag">{u["tag_play"]}</span>' if a['live'] else f'<span class="tag tag-soon">{u["tag_soon"]}</span>'
-        cards.append((d['name'], f'''        <a class="card" href="{page_path(lang, a["slug"])[len(page_path(lang)):]}">
+        cards.append((d['name'], f'''        <a class="card" href="{page_path(lang, a["slug"])[len(page_path(lang)):]}" data-cat="{a["cat"]}">
           <img class="card-icon" src="{pre}assets/apps/{a["slug"]}/icon.png" width="64" height="64" alt="" loading="lazy" />
           <h3>{e(d["name"])}</h3>
           <p>{e(d["short"])}</p>
@@ -384,14 +436,47 @@ def home_page(lang, all_data):
             for i, a in enumerate(sorted(APPS, key=lambda a: all_data[a['slug']][lang]['name'].lower()), 1)
         ],
     }
+    filters = '\n'.join(
+        f'        <button type="button" class="filter" data-cat="{c}" aria-pressed="{"true" if c == "all" else "false"}">{dz["cat"][c]}</button>'
+        for c in ['all'] + CATEGORIES)
+    pills = ''.join(f'<li>{p}</li>' for p in dz['pills'])
+    phones = '\n'.join(
+        f'          <img src="{pre}{asset_dir(BY_SLUG[s], lang)}shot-{n}.webp" width="340" height="604" alt="" />'
+        for s, n in HERO_SHOTS)
+    fa = BY_SLUG[FEATURED]
+    fd = all_data[FEATURED][lang]
+    featured = f'''      <h2>{dz["featured_h"]}</h2>
+      <section class="featured" style="--app: {fa["color"]}">
+{video_block(fa, lang, fd, pre)}
+        <div class="featured-text">
+          <img class="card-icon" src="{pre}assets/apps/{FEATURED}/icon.png" width="64" height="64" alt="" />
+          <h3>{e(fd["name"])}</h3>
+          <p>{e(fd["short"])}</p>
+          <div class="featured-actions">
+            <a class="play-badge" href="{e(play_url(fa, lang, f"featured-{lang}"))}" rel="noopener" target="_blank">
+              <img src="{pre}assets/google-play-badge.png" width="323" height="125" alt="{e(u["badge_alt"].format(title=fd["full_name"]))}" />
+            </a>
+            <a href="{page_path(lang, FEATURED)[len(page_path(lang)):]}">{e(dz["more_about"].format(name=fd["name"]))}</a>
+          </div>
+        </div>
+      </section>'''
     mail = f'<a href="mailto:{MAIL}">{MAIL}</a>'
     return f'''{head(lang, None, u["home_title"], u["home_desc"], BASE + "assets/og-default.jpg", [website, items])}
 <body>
   <div class="container">
-    <header class="site">
+    <header class="home-hero">
       {lang_switch(lang, None)}
-      <h1>Joost Muijsenberg</h1>
-      <p>{u["home_tagline"]}</p>
+      <div class="home-hero-grid">
+        <div class="home-hero-text">
+          <p class="eyebrow">Joost Muijsenberg</p>
+          <h1>{dz["hero_h"]}</h1>
+          <p class="hero-tagline">{dz["hero_sub"]}</p>
+          <ul class="pills">{pills}</ul>
+        </div>
+        <div class="hero-phones" aria-hidden="true">
+{phones}
+        </div>
+      </div>
     </header>
 
     <main>
@@ -400,9 +485,14 @@ def home_page(lang, all_data):
 {strip}
       </div>
 
+{featured}
+
       <h2>{u["games_h"]}</h2>
       <p class="lead">{u["games_lead"].format(live=len(live))}</p>
-      <div class="card-grid">
+      <div class="filters" role="group" aria-label="{dz["filter_label"]}" hidden>
+{filters}
+      </div>
+      <div class="card-grid" id="games">
 {chr(10).join(c[1] for c in cards)}
       </div>
 
@@ -475,8 +565,7 @@ def main():
     all_data = {a['slug']: {l: load(a, l) for l in LANGS} for a in APPS}
     for a in APPS:
         for l in LANGS:
-            if l != 'en':
-                convert_shots(a, l, all_data[a['slug']][l])
+            convert_shots(a, l, all_data[a['slug']][l])
             write(page_path(l, a['slug']) + 'index.html', app_page(a, l, all_data))
     for l in LANGS:
         write(page_path(l) + 'index.html', home_page(l, all_data))

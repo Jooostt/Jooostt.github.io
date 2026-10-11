@@ -128,7 +128,7 @@
 }
   </script>
 </head>
-<body>
+<body class="app-page has-sticky" style="--app: #e8395a">
   <div class="container">
     <div class="topbar">
       <nav class="crumbs"><a href="../../fr/">Jeux</a> &nbsp;/&nbsp; Dame de pique</nav>
@@ -150,12 +150,29 @@
     </div>
 
     <main>
-      <div class="shots">
-        <img src="../../assets/apps/hartenjagen/fr/shot-1.webp" width="340" height="604" alt="Dame de pique – menu principal" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/hartenjagen/fr/shot-2.webp" width="340" height="604" alt="Dame de pique – partie en cours" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/hartenjagen/fr/shot-3.webp" width="340" height="604" alt="Dame de pique – écran de victoire avec les scores" loading="lazy" decoding="async" />
-        <img src="../../assets/apps/hartenjagen/fr/shot-4.webp" width="340" height="604" alt="Dame de pique – réglage des règles" loading="lazy" decoding="async" />
+      <div class="shots" data-close="Fermer" data-prev="Précédente" data-next="Suivante">
+        <a class="shot" href="../../assets/apps/hartenjagen/fr/shot-1-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/hartenjagen/fr/shot-1.webp" width="340" height="604" alt="Dame de pique – menu principal" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/hartenjagen/fr/shot-2-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/hartenjagen/fr/shot-2.webp" width="340" height="604" alt="Dame de pique – partie en cours" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/hartenjagen/fr/shot-3-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/hartenjagen/fr/shot-3.webp" width="340" height="604" alt="Dame de pique – écran de victoire avec les scores" loading="lazy" decoding="async" />
+        </a>
+        <a class="shot" href="../../assets/apps/hartenjagen/fr/shot-4-lg.webp" aria-label="Agrandir la capture">
+          <img src="../../assets/apps/hartenjagen/fr/shot-4.webp" width="340" height="604" alt="Dame de pique – réglage des règles" loading="lazy" decoding="async" />
+        </a>
       </div>
+
+      <h2>Voir le jeu en action</h2>
+      <div class="video" data-yt="EfWKSad9uY4" data-hl="fr">
+        <a class="video-play" href="https://www.youtube.com/watch?v=EfWKSad9uY4" rel="noopener" target="_blank" aria-label="Lire la vidéo de Dame de pique">
+          <img src="../../assets/apps/hartenjagen/fr/feature.webp" alt="" loading="lazy" decoding="async" />
+          <span class="video-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <p class="video-note">La vidéo est lue via YouTube.</p>
 
       <h2>À propos de Dame de pique</h2>
       <p>Jouez à la Dame de pique, le jeu de cartes classique — à tout moment, partout et entièrement hors ligne. Vous contre trois joueurs de l&#x27;ordinateur : qui récoltera le moins de points de pénalité ?</p>
@@ -255,6 +272,11 @@
       <p>&copy; <span id="year">2026</span> Joost Muijsenberg. Un projet perso, réalisé par passion sur mon temps libre. <a href="../../fr/">Tous les jeux</a></p>
       <nav class="lang-switch" aria-label="Langue"><a href="../../hartenjagen/" hreflang="en" lang="en">English</a> · <a href="../../nl/hartenjagen/" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../de/hartenjagen/" hreflang="de" lang="de">Deutsch</a> · <a href="../../es/hartenjagen/" hreflang="es" lang="es">Español</a> · <strong>Français</strong> · <a href="../../pt/hartenjagen/" hreflang="pt" lang="pt">Português</a></nav>
     </footer>
+  </div>
+  <div class="sticky-cta">
+    <img src="../../assets/apps/hartenjagen/icon.png" width="40" height="40" alt="" />
+    <div class="sticky-text"><strong>Dame de pique</strong><span>Gratuit sur Google Play</span></div>
+    <a class="sticky-btn" href="https://play.google.com/store/apps/details?id=com.joostmuijsenberg.hearts&amp;hl=fr&amp;referrer=utm_source%3Djooostt.github.io%26utm_medium%3Dwebsite%26utm_campaign%3Dhartenjagen-fr-sticky" rel="noopener" target="_blank">Installer</a>
   </div>
   <script src="../../assets/site.js" defer></script>
 </body>
