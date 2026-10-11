@@ -176,7 +176,9 @@ def head(lang, slug, langs, title, desc, og_image, extra_ld):
     ld = '\n'.join(
         f'  <script type="application/ld+json">\n{json.dumps(obj, indent=2, ensure_ascii=False)}\n  </script>'
         for obj in extra_ld)
-    verify = '  <meta name="p:domain_verify" content="8a36ac90cfb680cd9bb29832ba4d842f" />\n' if lang == 'en' and not slug else ''
+    # Verificatie voor Pinterest en Bing Webmaster Tools, alleen op de Engelse homepage.
+    verify = ('  <meta name="p:domain_verify" content="8a36ac90cfb680cd9bb29832ba4d842f" />\n'
+              '  <meta name="msvalidate.01" content="2741EB10E13850E4C3A199FA09C2F3E7" />\n') if lang == 'en' and not slug else ''
     return f'''<!DOCTYPE html>
 <html lang="{lang}">
 <head>
