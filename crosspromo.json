@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-21",
+  "updated": "2026-10-14",
   "apps": [
     {
       "id": "com.joostmuijsenberg.wordconnect",
@@ -542,7 +542,7 @@
         "puzzle"
       ],
       "weight": 60,
-      "active": false,
+      "active": true,
       "pitch": {
         "nl": "Voeg getallen samen tot 2048",
         "en": "Merge numbers, reach 2048",
@@ -601,7 +601,7 @@
         "puzzle"
       ],
       "weight": 60,
-      "active": false,
+      "active": true,
       "pitch": {
         "nl": "Sorteer elke kleur op zijn plek",
         "en": "Sort every colour into place",
@@ -660,7 +660,7 @@
         "trivia"
       ],
       "weight": 60,
-      "active": false,
+      "active": true,
       "pitch": {
         "nl": "Raad de vlag, noem het land",
         "en": "Guess the flag, name the country",
@@ -719,7 +719,7 @@
         "puzzle"
       ],
       "weight": 80,
-      "active": false,
+      "active": true,
       "pitch": {
         "nl": "Kraak de code, onthul het citaat",
         "en": "Crack the code, reveal the quote",
@@ -778,7 +778,7 @@
         "puzzle"
       ],
       "weight": 60,
-      "active": false,
+      "active": true,
       "pitch": {
         "nl": "Match getallen, ruim het raster op",
         "en": "Match numbers, clear the grid",
@@ -837,7 +837,7 @@
         "puzzle"
       ],
       "weight": 60,
-      "active": false,
+      "active": true,
       "pitch": {
         "nl": "Draai de buizen, maak de leiding rond",
         "en": "Turn the pipes, complete the flow",
@@ -896,7 +896,7 @@
         "trivia"
       ],
       "weight": 60,
-      "active": false,
+      "active": true,
       "pitch": {
         "nl": "Veeg door weetjes, zonder internet",
         "en": "Swipe through facts, no internet",
