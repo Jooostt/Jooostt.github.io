@@ -290,13 +290,13 @@ header.hero::before {
   header.hero { flex-direction: column; align-items: flex-start; gap: 16px; }
 }
 
-.cta { margin-bottom: 36px; }
+.cta { margin-bottom: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
 
 .play-badge { display: inline-block; line-height: 0; }
 
 .play-badge img {
-  width: 194px;
-  height: auto;
+  height: 50px;
+  width: auto;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
@@ -640,7 +640,7 @@ footer.site .lang-switch { margin-top: 8px; }
   gap: 8px 18px;
 }
 
-.featured-actions .play-badge img { width: 160px; }
+.featured-actions .play-badge img { height: 41px; }
 
 /* ---------- filters ---------- */
 
@@ -917,14 +917,14 @@ footer.site .lang-switch { margin-top: 8px; }
 .store-badge { display: inline-block; line-height: 0; }
 
 .store-badge img {
-  width: 160px;
-  height: auto;
+  height: 50px;
+  width: auto;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
 .store-badge:hover img { transform: translateY(-2px); opacity: 0.88; }
 
-.featured-actions .store-badge img { width: 140px; }
+.featured-actions .store-badge img { height: 41px; }
 
 @media (max-width: 700px) {
   .sticky-btns { flex: none; display: flex; flex-direction: column; gap: 6px; }
