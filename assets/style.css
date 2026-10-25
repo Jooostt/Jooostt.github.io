@@ -911,3 +911,22 @@ footer.site .lang-switch { margin-top: 8px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
 }
+
+/* ---------- App Store-badge naast de Google Play-badge ---------- */
+
+.store-badge { display: inline-block; line-height: 0; }
+
+.store-badge img {
+  width: 160px;
+  height: auto;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.store-badge:hover img { transform: translateY(-2px); opacity: 0.88; }
+
+.featured-actions .store-badge img { width: 140px; }
+
+@media (max-width: 700px) {
+  .sticky-btns { flex: none; display: flex; flex-direction: column; gap: 6px; }
+  .sticky-btns .sticky-btn { padding: 7px 14px; font-size: 0.8rem; text-align: center; }
+}
