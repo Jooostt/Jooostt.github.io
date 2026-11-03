@@ -935,3 +935,5 @@ footer.site .lang-switch { margin-top: 8px; }
 
 .amazon-badge img { height: 50px; width: auto; }
 .featured-actions .amazon-badge img { height: 41px; }
+
+.card .tag { margin-right: 4px; }
