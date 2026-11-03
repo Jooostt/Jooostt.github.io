@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="40" viewBox="0 0 150 40" role="img" aria-label="Amazon Appstore">
+  <rect x="0.5" y="0.5" width="149" height="39" rx="7" fill="#000" stroke="#a6a6a6"/>
+  <text x="75" y="17" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" fill="#fff">Get it on</text>
+  <text x="75" y="31" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#fff">Amazon Appstore</text>
+</svg>

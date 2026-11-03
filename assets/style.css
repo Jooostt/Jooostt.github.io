@@ -930,3 +930,8 @@ footer.site .lang-switch { margin-top: 8px; }
   .sticky-btns { flex: none; display: flex; flex-direction: column; gap: 6px; }
   .sticky-btns .sticky-btn { padding: 7px 14px; font-size: 0.8rem; text-align: center; }
 }
+
+/* ---------- Amazon Appstore-badge ---------- */
+
+.amazon-badge img { height: 50px; width: auto; }
+.featured-actions .amazon-badge img { height: 41px; }
